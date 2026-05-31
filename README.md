@@ -115,6 +115,10 @@ Ensure you have the **.NET SDK 10** installed:
 
 ### How to Run Solutions
 
+Since each problem has its own `solution.cs` with top-level statements, the project uses an **MSBuild property** to select which solution to compile and run. All `solution.cs` files are excluded from compilation by default — you pass the path of the one you want to run.
+
+#### Step-by-step
+
 1. Clone the repository:
 
    ```bash
@@ -122,13 +126,35 @@ Ensure you have the **.NET SDK 10** installed:
    cd way-to-master-cp
    ```
 
-2. Build the solution to restore dependencies:
+2. Run a **specific** solution by passing its path (relative to `src/`) via `-p:Solution=`:
 
    ```bash
-   dotnet build
+   dotnet run --project src/WayToMasterCP.csproj \
+     -p:Solution="01-RecursionAndBacktracking/acm-level-2-sheet/Gold Rush/solution.cs"
    ```
 
-3. Run the solution runner project:
+3. Pipe input for automated testing:
+
    ```bash
-   dotnet run --project src/WayToMasterCP.csproj
+   echo "3
+   6 4
+   9 4
+   4 2" | dotnet run --project src/WayToMasterCP.csproj \
+     -p:Solution="01-RecursionAndBacktracking/acm-level-2-sheet/Gold Rush/solution.cs"
    ```
+
+#### How it works
+
+```mermaid
+flowchart LR
+    classDef default fill:#1a1b26,stroke:#7aa2f7,stroke-width:2px,color:#c0caf5
+    classDef highlight fill:#24283b,stroke:#bb9af7,stroke-width:3px,color:#bb9af7,font-weight:bold
+
+    A[".csproj excludes all solution.cs"]:::default
+    B["-p:Solution=path includes ONE file"]:::highlight
+    C["dotnet run compiles & executes it"]:::default
+
+    A --> B --> C
+```
+
+> **💡 Tip:** The `Solution` path is **relative to `src/`** (the folder where `WayToMasterCP.csproj` lives). You only need the path starting from the topic folder.
