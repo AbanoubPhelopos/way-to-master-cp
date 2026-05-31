@@ -2,9 +2,9 @@
 
 | Info             | Details                                                 |
 | :--------------- | :------------------------------------------------------ |
-| **Problem Link** | Classic LIS Problem                                    |
+| **Problem Link** | [VJudge - Easy Longest Increasing Subsequence](https://vjudge.net/contest/793439#problem/B) |
 | **Topic**        | Recursion & Dynamic Programming                        |
-| **Difficulty**   | 1000                                                   |
+| **Difficulty**   | --                                                   |
 
 ---
 
