@@ -1,10 +1,10 @@
 # 🎒 Practice: Knapsack
 
-| Info             | Details                                                                 |
-| :--------------- | :---------------------------------------------------------------------- |
-| **Problem Link** | Classic 0/1 Knapsack Problem                                            |
-| **Topic**        | Recursion                                                               |
-| **Difficulty**   | --                                                                   |
+| Info             | Details                                                                       |
+| :--------------- | :---------------------------------------------------------------------------- |
+| **Problem Link** | [Knapsack](https://vjudge.net/contest/793439#problem/C)                         |
+| **Topic**        | Recursion                                                                     |
+| **Difficulty**   | --                                                                            |
 
 ---
 
